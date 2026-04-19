@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Journal | Explore India & Beyond</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #222; }
+
+    /* NAV */
+    nav {
+      background: #1a1a2e;
+      padding: 16px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav .logo { color: #f5a623; font-size: 1.5rem; font-weight: 700; letter-spacing: 1px; }
+    nav ul { list-style: none; display: flex; gap: 28px; }
+    nav ul li a { color: #fff; text-decoration: none; font-size: 0.95rem; transition: color 0.2s; }
+    nav ul li a:hover { color: #f5a623; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #0f3460 0%, #16213e 50%, #1a1a2e 100%);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 { font-size: 3rem; margin-bottom: 16px; }
+    .hero h1 span { color: #f5a623; }
+    .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto 32px; opacity: 0.85; }
+    .btn {
+      background: #f5a623;
+      color: #1a1a2e;
+      padding: 14px 36px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #e09615; }
+
+    /* SECTION */
+    section { padding: 70px 40px; }
+    section h2 { text-align: center; font-size: 2rem; margin-bottom: 10px; color: #1a1a2e; }
+    .subtitle { text-align: center; color: #666; margin-bottom: 48px; }
+
+    /* DESTINATIONS */
+    .destinations { background: #f9f9f9; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.09);
+      transition: transform 0.2s;
+    }
+    .card:hover { transform: translateY(-6px); }
+    .card-img {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+    }
+    .card-body { padding: 20px; }
+    .card-body h3 { font-size: 1.2rem; margin-bottom: 6px; color: #1a1a2e; }
+    .card-body p { color: #666; font-size: 0.9rem; line-height: 1.5; }
+    .tag {
+      display: inline-block;
+      margin-top: 10px;
+      background: #fff3e0;
+      color: #f5a623;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    /* TIPS */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .tip-card {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 28px 20px;
+      text-align: center;
+    }
+    .tip-card .icon { font-size: 2.2rem; margin-bottom: 12px; }
+    .tip-card h4 { font-size: 1rem; margin-bottom: 8px; color: #1a1a2e; }
+    .tip-card p { font-size: 0.88rem; color: #666; line-height: 1.5; }
+
+    /* CONTACT */
+    .contact { background: #f9f9f9; }
+    form {
+      max-width: 540px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    form input, form textarea {
+      padding: 14px 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-family: inherit;
+    }
+    form textarea { resize: vertical; min-height: 120px; }
+    form button { align-self: flex-start; }
+
+    /* FOOTER */
+    footer {
+      background: #1a1a2e;
+      color: #aaa;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 0.88rem;
+    }
+    footer span { color: #f5a623; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">✈️ TravelJournal</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#tips">Travel Tips</a></li>
+      <li><a href="#contact">Plan a Trip</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <h1>Explore <span>Incredible India</span> &amp; Beyond</h1>
+    <p>Discover breathtaking destinations, plan unforgettable itineraries, and travel smarter with curated tips.</p>
+    <a href="#destinations" class="btn">Explore Destinations</a>
+  </section>
+
+  <!-- DESTINATIONS -->
+  <section class="destinations" id="destinations">
+    <h2>Featured Destinations</h2>
+    <p class="subtitle">Hand-picked places you need to visit at least once</p>
+    <div class="cards">
+      <div class="card">
+        <div class="card-img" style="background:#e8f5e9;">🏔️</div>
+        <div class="card-body">
+          <h3>Manali, Himachal Pradesh</h3>
+          <p>Snow-capped peaks, adventure sports, and cozy cafes nestled in the Himalayas.</p>
+          <span class="tag">Oct – Feb</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img" style="background:#e3f2fd;">🏖️</div>
+        <div class="card-body">
+          <h3>Goa</h3>
+          <p>Golden beaches, vibrant nightlife, and a blend of Indian and Portuguese culture.</p>
+          <span class="tag">Nov – Feb</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img" style="background:#fff8e1;">🏰</div>
+        <div class="card-body">
+          <h3>Jaipur, Rajasthan</h3>
+          <p>The Pink City — majestic forts, royal palaces, and colourful bazaars.</p>
+          <span class="tag">Oct – Mar</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img" style="background:#e8eaf6;">🏜️</div>
+        <div class="card-body">
+          <h3>Ladakh, J&amp;K</h3>
+          <p>Dramatic landscapes, ancient monasteries, and the highest motorable roads in the world.</p>
+          <span class="tag">Jun – Sep</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img" style="background:#e0f7fa;">🛶</div>
+        <div class="card-body">
+          <h3>Kerala Backwaters</h3>
+          <p>Serene houseboat rides through lush green waterways — pure tranquillity.</p>
+          <span class="tag">Sep – Mar</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img" style="background:#f3e5f5;">☕</div>
+        <div class="card-body">
+          <h3>Coorg, Karnataka</h3>
+          <p>India's coffee country — misty hills, spice gardens, and waterfall treks.</p>
+          <span class="tag">Oct – Apr</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIPS -->
+  <section id="tips">
+    <h2>Budget Travel Tips</h2>
+    <p class="subtitle">Travel more, spend less — smart tips for every explorer</p>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="icon">🗓️</div>
+        <h4>Book in Advance</h4>
+        <p>Flights and hotels booked 6–8 weeks early can save up to 40% on costs.</p>
+      </div>
+      <div class="tip-card">
+        <div class="icon">🚂</div>
+        <h4>Travel by Train</h4>
+        <p>Indian Railways connects almost everywhere — affordable, scenic, and reliable.</p>
+      </div>
+      <div class="tip-card">
+        <div class="icon">🏠</div>
+        <h4>Stay in Hostels</h4>
+        <p>Hostels and homestays often offer the best local experience at a fraction of the cost.</p>
+      </div>
+      <div class="tip-card">
+        <div class="icon">🍛</div>
+        <h4>Eat Local</h4>
+        <p>Street food and local dhabas are not just budget-friendly — they are the real taste of India.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>Plan Your Trip</h2>
+    <p class="subtitle">Tell us your dream destination and we'll help you plan it</p>
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <input type="text" placeholder="Dream Destination" required />
+      <textarea placeholder="Tell us about your trip — dates, budget, preferences..."></textarea>
+      <button type="submit" class="btn">Send My Plan Request</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Made with <span>❤️</span> by <span>Anushka-4848</span> &nbsp;|&nbsp; Travel Journal &copy; 2026</p>
+  </footer>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert('Thank you! We will get back to you with your personalised travel plan.');
+      e.target.reset();
+    }
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>
